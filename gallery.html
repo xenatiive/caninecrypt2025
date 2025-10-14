@@ -157,35 +157,26 @@
     </header>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const switchButton = document.getElementById('switchIframeButton');
-        const iframes = document.querySelectorAll('iframe');
+  document.addEventListener('DOMContentLoaded', function () {
+    const switchButton = document.getElementById('switchIframeButton');
+    const iframes = document.querySelectorAll('iframe');
+    let switched = false;
 
-        // Store original srcs in an array
-        const originalSrcs = Array.from(iframes).map(iframe => iframe.src);
+    switchButton.addEventListener('click', function () {
+      iframes.forEach((iframe) => {
+        const originalSrc = iframe.getAttribute('data-original-src');
+        const altSrc = iframe.getAttribute('data-alt-src');
 
-        // Define new sources to switch to
-        const newSrcs = [
-          'gallery/fullrendernsfw.html',
-          'gallery/sketchnsfw.html',
-          'gallery/flatnsfw.html',
-          'gallery/misc.html'
-        ];
-
-        let switched = false; // toggle flag
-
-        switchButton.addEventListener('click', function () {
-          iframes.forEach((iframe, index) => {
-            // Toggle src between original and new
-            iframe.src = switched ? originalSrcs[index] : newSrcs[index];
-          });
-
-          // Update button text and toggle state
-          switchButton.textContent = switched ? 'Toggle NSFW ON' : 'Toggle NSFW OFF';
-          switched = !switched;
-        });
+        // Toggle between original and alternate srcs
+        iframe.setAttribute('src', switched ? originalSrc : altSrc);
       });
-    </script>
+
+      switchButton.textContent = switched ? 'Toggle NSFW ON' : 'Toggle NSFW OFF';
+      switched = !switched;
+    });
+  });
+</script>
+
 
     <div class="box">
       <button class="button-55" role="button" id="switchIframeButton">Toggle NSFW ON</button>
