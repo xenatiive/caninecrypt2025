@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>CANINECRYPT // GALLERY </title>
+  <title>CANINECRYPT // GALLERY</title>
   <meta charset="UTF-8">
   <link rel="icon" href="images/style/skullfavicon.png" type="image/gif">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,9 @@
       background-color: #c0c0be;
     }
 
-    p, h2 {
+    p,
+    h2,
+    button-55 {
       margin: 15px;
       font-family: "Yatra One", system-ui;
       font-weight: 400;
@@ -85,48 +87,124 @@
     }
 
     /* width */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px grey;
-        }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+    }
 
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: rgb(0, 0, 0);
-        }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgb(0, 0, 0);
+    }
 
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #2e2e2e;
-        }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2e2e2e;
+    }
+
+    .button-55 {
+      align-self: center;
+      background-color: #fff;
+      background-image: none;
+      background-position: 0 90%;
+      background-repeat: repeat no-repeat;
+      background-size: 4px 3px;
+      border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+      border-style: solid;
+      border-width: 2px;
+      box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+      box-sizing: border-box;
+      color: #41403e;
+      cursor: pointer;
+      display: inline-block;
+      outline: none;
+      padding: .75rem;
+      text-decoration: none;
+      transition: all 235ms ease-in-out;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      font-family: "Yatra One", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .button-55:hover {
+      box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+      transform: translate3d(0, 2px, 0);
+    }
+
+    .button-55:focus {
+      box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
   </style>
   <div class="content">
     <header>
       <br> <!-- leave this br in for equal spacing-->
       <div style="text-align: center;">
-        <a href="index.html"><img src="buttons/CClogo.png"/></a>
+        <a href="index.html"><img src="buttons/CClogo.png" /></a>
       </div>
     </header>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const switchButton = document.getElementById('switchIframeButton');
+        const iframes = document.querySelectorAll('iframe');
+
+        // Store original srcs in an array
+        const originalSrcs = Array.from(iframes).map(iframe => iframe.src);
+
+        // Define new sources to switch to
+        const newSrcs = [
+          'gallery/fullrendernsfw.html',
+          'gallery/sketchnsfw.html',
+          'gallery/flatnsfw.html',
+          'gallery/misc.html'
+        ];
+
+        let switched = false; // toggle flag
+
+        switchButton.addEventListener('click', function () {
+          iframes.forEach((iframe, index) => {
+            // Toggle src between original and new
+            iframe.src = switched ? originalSrcs[index] : newSrcs[index];
+          });
+
+          // Update button text and toggle state
+          switchButton.textContent = switched ? 'Toggle NSFW ON' : 'Toggle NSFW OFF';
+          switched = !switched;
+        });
+      });
+    </script>
+
     <div class="box">
+      <button class="button-55" role="button" id="switchIframeButton">Toggle NSFW ON</button>
       <p><a href="index.html">&#x2190; go back home</a></p>
+
       <h2 id="#fullrender">Full Render</h2>
-      <iframe class="iframe" src="gallery/fullrender.html"></iframe>
+
+      <iframe class="iframe" id="iframe1" src="gallery/fullrender.html" height="500px" width="100%" overflow-x:auto;
+        style="border:none;" title="gallery"></iframe>
       <hr>
       <h2 id="#sketches">Sketches</h2>
-      <iframe class="iframe" src="gallery/sketch.html" height="500px" width="100%" overflow-x:auto;
+      <iframe class="iframe" id="iframe2" src="gallery/sketch.html" height="500px" width="100%" overflow-x:auto;
         style="border:none;" title="gallery"></iframe>
       <hr>
       <h2 id="#flatcolor">Flat Color</h2>
-      <iframe class="iframe" src="gallery/flat.html" height="500px" width="100%" overflow-x:auto;
-        style="border:none;" title="gallery"></iframe>
+      <iframe class="iframe" src="gallery/flat.html" height="500px" width="100%" overflow-x:auto; style="border:none;"
+        title="gallery"></iframe>
       <hr>
       <h2 id="#misc">Miscellaneous</h2>
-      <iframe class="iframe" src="gallery/misc.html" height="500px" width="100%" overflow-x:auto;
-        style="border:none;" title="gallery"></iframe>
+      <iframe class="iframe" src="gallery/misc.html" height="500px" width="100%" overflow-x:auto; style="border:none;"
+        title="gallery"></iframe>
     </div>
   </div>
 </body>
