@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CANINECRYPT // GALLERY </title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/style/skullfavicon.png" type="image/gif">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    body {
+      background-color: #c0c0be;
+    }
+
+    p, h2 {
+      margin: 15px;
+      font-family: "Yatra One", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    h2 {
+      padding-top: 13px;
+    }
+
+    a {
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-decoration-line: underline;
+      text-decoration-color: rgb(0, 0, 0);
+      text-decoration-style: wavy;
+      text-shadow: #000000 1px 0 10px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #c0c0be;
+      padding-bottom: 10px;
+      width: 100%;
+      margin: 0;
+    }
+
+    .preview {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .img-container {
+      padding: 15px;
+      display: flex;
+      /* shorthand for flex-direction and flex-wrap*/
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-content: flex-start;
+    }
+
+    .content {
+      /* should match box colour*/
+      background-color: #c0c0be;
+      display: grid;
+      position: relative;
+      padding-bottom: 50px;
+      margin: auto;
+    }
+
+    .box {
+      /*should match content colour*/
+      background-color: #c0c0be;
+      padding: 20px;
+      text-align: center;
+      padding-bottom: 0px;
+    }
+
+    .iframe {
+      width: 90%;
+      height: 500px;
+      border: none;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-color: rgb(255, 78, 78) rgb(0, 0, 0);
+    }
+
+    /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(0, 0, 0);
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2e2e2e;
+        }
+  </style>
+  <div class="content">
+    <header>
+      <br> <!-- leave this br in for equal spacing-->
+      <div style="text-align: center;">
+        <a href="index.html"><img src="buttons/CClogo.png"/></a>
+      </div>
+    </header>
+    <div class="box">
+      <p><a href="index.html">&#x2190; go back home</a></p>
+      <h2 id="#fullrender">Full Render</h2>
+      <iframe class="iframe" src="gallery/fullrender.html"></iframe>
+      <hr>
+      <h2 id="#sketches">Sketches</h2>
+      <iframe class="iframe" src="gallery/sketch.html" height="500px" width="100%" overflow-x:auto;
+        style="border:none;" title="gallery"></iframe>
+      <hr>
+      <h2 id="#flatcolor">Flat Color</h2>
+      <iframe class="iframe" src="gallery/flat.html" height="500px" width="100%" overflow-x:auto;
+        style="border:none;" title="gallery"></iframe>
+      <hr>
+      <h2 id="#misc">Miscellaneous</h2>
+      <iframe class="iframe" src="gallery/misc.html" height="500px" width="100%" overflow-x:auto;
+        style="border:none;" title="gallery"></iframe>
+    </div>
+  </div>
+</body>
+</html>

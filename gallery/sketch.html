@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_blank"> <!--opens all links in separate pages UNLESS otherwise specified-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://unpkg.com/photoviewer@3.6.2/dist/photoviewer.css">
+<style>
+/***
+EZ Gallery by netfriend - https://netfriend.neocities.org/ez-gallery/
+Released under the Unlicense - https://unlicense.org/
+***/
+
+.ezgallery.montage { 
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.ezgallery.montage img {
+  flex: auto;
+  margin: 2px 5px 5px 5px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.ezgallery.horizontal { 
+  display: grid;
+  grid-gap: 5px;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.ezgallery.horizontal a {
+  text-align: center;
+}
+
+.ezgallery.horizontal img {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 5px 5px 0;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+  object-position: bottom;
+}
+ 
+img {
+  height: 250px;
+}
+
+img:hover {
+  box-shadow: 0 0 5px rgb(255, 0, 43), 0 0 2px blue;
+  transform: scale(1.01);
+}
+</style>
+  </head>
+  <body>    
+      <div class="ezgallery montage">
+          <a href="../images/gallery/sketch/boobs.png"><img src="../images/gallery/thumbs/boobs.png"></a>
+          <a href="../images/gallery/sketch/bugs.png"><img src="../images/gallery/thumbs/bugs.png"></a>
+          <a href="../images/gallery/sketch/twobros.png"><img src="../images/gallery/thumbs/twobros.png"></a>
+          <a href="../images/gallery/sketch/theskunk.png"><img src="../images/gallery/thumbs/theskunk.png"></a>
+          <a href="../images/gallery/sketch/echo.png"><img src="../images/gallery/thumbs/echo.png"></a>
+          <a href="../images/gallery/sketch/einar.png"><img src="../images/gallery/thumbs/einar.png"></a>
+          <a href="../images/gallery/sketch/mommymilk.png"><img src="../images/gallery/thumbs/mommymilk.png"></a>
+          <a href="../images/gallery/sketch/raw.png"><img src="../images/gallery/thumbs/raw.png"></a>
+          <a href="../images/gallery/sketch/strap.png"><img src="../images/gallery/thumbs/strap.png"></a>
+          <!-- <a href="../images/gallery/sketch/woahballs.png"><img src="../images/gallery/sketch/woahballs.png"></a> -->
+      </div>    
+      <script src="https://unpkg.com/photoviewer@3.6.2/dist/photoviewer.min.js"></script>
+      <script src="gallery.js"></script>    
+  </body>
+</html>

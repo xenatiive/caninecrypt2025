@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WAIT!!!</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/style/bangbang.webp" type="image/gif">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      margin: auto;
+      font-family: "Yatra One", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      background-color: black;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .scroll::-webkit-scrollbar-track {
+      background-color: #000000;
+    }
+
+    .scroll::-webkit-scrollbar {
+      width: 10px;
+      background-color: #000000;
+    }
+
+    .scroll::-webkit-scrollbar-thumb {
+      background-color: #000000;
+    }
+
+    h1 {
+      color: red;
+      text-decoration: underline;
+    }
+
+    h3 {
+      color: #ffffff;
+    }
+
+    .outside {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .yes, .no {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .yes a img {
+      width: 250px;
+      height: auto;
+      margin-top: -70px;
+      transition: transform 0.3s ease;
+    }
+
+    .no a img {
+      width: 250px;
+      height: auto;
+      margin-top: -70px;
+      transition: transform 0.3s ease;
+    }
+
+    .yes, .no a:first-child img {
+      margin-top: 0;
+    }
+
+    .yes a img:hover {
+      transform: scale(1.1);
+      box-shadow: #65f02e66 0px 5px, #65f02e66 0px 10px, #65f02e66 0px 15px, #65f02e66 0px 20px, #65f02e66 0px 25px;
+      background-color: rgb(0, 218, 0);
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(to top, rgb(64, 214, 72), rgb(208, 243, 142));
+      background-blend-mode: color-burn;
+    }
+
+    .no a img:hover {
+      transform: scale(1.1);
+      box-shadow: rgba(240, 46, 46, 0.4) 0px 5px, rgba(240, 46, 46, 0.3) 0px 10px, rgba(240, 46, 46, 0.2) 0px 15px, rgba(240, 46, 46, 0.1) 0px 20px, rgba(240, 46, 46, 0.05) 0px 25px;
+      background-color: red;
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(to top, red, yellow);
+      background-blend-mode: overlay;
+    }
+  </style>
+</head>
+
+<body class="scroll">
+  <audio id="dooropen">
+    <source src="https://files.catbox.moe/7uv7u5.mp3">
+  </audio>
+  <audio id="doorclose">
+    <source src="https://files.catbox.moe/2e2xkm.mp3">
+  </audio>
+  <center>
+    <br><br><br>
+    <h1>STOP RIGHT THERE!</h1>
+    <h3>this page contains NSFW material and is <i>not</i> suitable for children. turn back now if you are still under
+      the age of your local legal majority (aka a child).</h3>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="outside">
+      <div class="yes" style="top: 150px;">
+        <a onmouseover="document.getElementById('dooropen').play()" href="gallery.html"><img src="buttons/iam18.png" alt="am 18" style="width:380px;height:100px;"/></a>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br>
+      <div class="no" style="top: 290px;">
+        <a onmouseover="document.getElementById('doorclose').play()" href="index.html"><img src="buttons/takemehome.png" alt="not 18" style="width:400px;height:80px;"/></a>
+      </div>
+    </div>
+  </center>
+</body>
+</html>
