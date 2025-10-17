@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>CANINECRYPT // COMMISSIONS</title>
     <meta charset="UTF-8">
@@ -10,25 +9,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
-</head>
-
-<body>
     <style>
-        * {
-            margin: 0;
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
         }
 
-        hr.break {
-            border: 1px dashed rgb(0, 0, 0);
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom, #ce6b6b, #693636);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        h2, h3, p, td, th {
+            font-family: "Yatra One", system-ui;
+            font-weight: 400;
+            font-style: normal;
         }
 
         h2 {
             text-align: center;
             text-shadow: 2px 2px 4px rgb(0, 0, 0);
             margin: 15px;
-            font-family: "Yatra One", system-ui;
-            font-weight: 400;
-            font-style: normal;
         }
 
         h3 {
@@ -36,89 +47,8 @@
             text-shadow: 2px 2px 4px rgb(0, 0, 0);
         }
 
-        table {
-            border-collapse: collapse;
-            width: 90%;
-            /*keeps table from getting too big on pc screen*/
-            width: max(50%, min(500px, 100%));
-        }
-
-        th {
-            text-align: center;
-            padding: 3px;
-            border: 1px dashed #000000;
-            height: 20px;
-            width: 20px;
-            color: #000000;
-            font-size: 14px;
-            font-family: "Yatra One", system-ui;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        td {
-            text-align: center;
-            padding: 3px;
-            border: 1px dashed #000000;
-            height: 20px;
-            width: 20px;
-            font-family: "Yatra One", system-ui;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        ul {
-            list-style-position: inside;
-            list-style-position: outside;
-            text-align: left;
-            margin-right: 12px;
-            list-style-image: url("https://64.media.tumblr.com/8719e3415315fd9aa2353aef890ffb77/52bc904368f8588c-51/s75x75_c1/cd63b1578ff8d2bf513259466e750f4bdc1c9eab.gifv");
-        }
-
-        .nested-list {
-            list-style-position: inside;
-            list-style-position: outside;
-            padding-left: 80px;
-            list-style-image: url("https://64.media.tumblr.com/ab09dd05fc26176eaf38ebbbe14bccd4/955a942df62a8781-58/s75x75_c1/66450cbe1fa8063391caa3c4075c6c4671151019.gifv");
-        }
-
-        /* comm-specific box */
-        .comm-box {
-            background-color: #ffffff;
-            border: 2px solid #000000;
-            padding: 10px;
-            font-size: 16px;
-            /*keeps table bg box from getting too big on pc screen*/
-            width: max(30%, min(400px, 100%));
-        }
-
-        .comm-list {
-            background-color: white;
-            /*keeps boxes in center*/
-            border: 1px solid rgb(0, 0, 0);
-            padding: 10px;
-            margin: 0 auto;
-            font-size: 18px;
-            /*keeps table bg box from getting too big on pc screen*/
-            width: max(50%, min(400px, 100%));
-        }
-
-        .comm-status {
-            border: 2px dashed #000000;
-            margin: 0 auto;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        body {
-            background-image: linear-gradient(to bottom, #ce6b6b, #693636);
-        }
-
         p {
             margin: 15px;
-            font-family: "Yatra One", system-ui;
-            font-weight: 400;
-            font-style: normal;
             font-size: medium;
         }
 
@@ -132,27 +62,12 @@
         }
 
         header {
+            padding: 10px;
+            margin: 0 auto;
+            width: 95%;
+            transition: width 0.2s ease-in-out;
             position: sticky;
             top: 0;
-            background-color: #ce6b6b;
-            padding-bottom: 10px;
-            padding-top: 6px;
-            width: 100%;
-            margin: 0;
-        }
-
-        .preview {
-            text-align: center;
-            margin: 10px;
-        }
-
-        .img-container {
-            padding: 15px;
-            display: flex;
-            /* shorthand for flex-direction and flex-wrap*/
-            flex-flow: row wrap;
-            justify-content: space-around;
-            align-content: flex-start;
         }
 
         .content {
@@ -165,96 +80,146 @@
         .box {
             padding: 20px;
             text-align: center;
-            padding-bottom: 0px;
+            width: 100%;
         }
 
-        /* width */
+        .comm-box,
+        .comm-list {
+            background-color: white;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 0 auto 20px auto;
+            width: 95%;
+            max-width: 700px;
+            transition: width 0.2s ease-in-out;
+        }
+
+        .comm-list {
+            border-width: 1px;
+            font-size: 18px;
+        }
+
+        .comm-status {
+            border: 2px dashed #000000;
+            margin: 0 auto;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .preview {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .img-container {
+            padding: 15px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-content: flex-start;
+        }
+
+        .resize,
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .center-image {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 3px;
+            border: 1px dashed #000000;
+            height: 20px;
+            font-size: 14px;
+        }
+
+        ul {
+            text-align: left;
+            margin-right: 12px;
+            list-style-image: url("images/style/starlist.webp");
+        }
+
+        .nested-list {
+            padding-left: 80px;
+            list-style-image: url("images/style/spinningstarlist.webp");
+        }
+
+        hr.break {
+            border: 1px dashed rgb(0, 0, 0);
+            width: 90%;
+            margin: 20px auto;
+        }
+        
         ::-webkit-scrollbar {
             width: 10px;
         }
 
-        /* Track */
         ::-webkit-scrollbar-track {
             box-shadow: inset 0 0 5px grey;
         }
 
-        /* Handle */
         ::-webkit-scrollbar-thumb {
             background: rgb(0, 0, 0);
         }
 
-        /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
             background: #2e2e2e;
         }
 
-        .resize {}
-
-        .center-image {
-            height: auto;
-            left: 50%;
-            text-align: center;
-        }
-
-        /* MOBILE-ONLY STYLES */
+        /* Mobile-Specific Fixes */
         @media (max-width: 480px) {
-            .resize {
-                max-width: 100vw;
-                /* Ensures the image never exceeds the width of its parent container */
-            }
-
-            .center-image {
-                left: 50%;
-                max-width: 90vw;
-            }
-
-            .box {
-                padding: 20px;
-                text-align: center;
-                padding-bottom: 0px;
+            .box,
+            .comm-box,
+            .comm-list {
                 width: 90vw;
             }
 
-            .comm-box {
-                padding: 20px;
-                text-align: center;
-                padding-bottom: 20px;
-                width: 80vw;
+            .center-image img {
+                max-width: 90vw;
             }
-
-            .comm-list {
-            background-color: white;
-            border: 1px solid rgb(0, 0, 0);
-            margin: 0 auto;
-            width: 85vw;
-        }
         }
     </style>
+</head>
+
+<body>
     <div class="content">
         <header>
-            <br> <!-- leave this br in for equal spacing-->
-            <div class="center-image" style="text-align: center;">
-                <a href="index.html"><img src="buttons/CClogo.png" class="resize"></a>
+            <div class="center-image">
+                <a href="index.html">
+                    <img src="buttons/CClogo.png" class="resize">
+                </a>
             </div>
         </header>
+
         <div class="box">
             <p><a href="index.html">&#x2190; go back home</a></p>
-            <h2>Standard Commission Info</h2>
-            <p style="font-size: large;">The prices listed within the tables are the base price for all commissions and
-                all prices are subject to
-                a potential increase for detailed characters, prompts, or props.<br> Commissions featuring additional
-                characters start at +50% of the base price listed in the tables. Alternate versions of the same
-                commission (eg: one with and w/o clothes) start at an extra 25% of the base price -- always ask the
-                artist for a quote!</p>
-            <p style="font-size: large;">Please ensure you have read over, understand, and agree to <a
-                    href="commissions.html##terms-service">my
-                    T.O.S!</a> Feel free to reach out to the artist if anything on this page is unclear, or there are
-                commission ideas that do not fit these standard table molds.</p>
-            <p style="font-size: large;">Examples of rendering styles can be found <a href="../enter.html">here.</a></p>
-            <p style="font-size: 13px; text-align: center;">Latest TOS update: 3/15/25</p>
-            <hr class="break">
-            <center>
 
+            <h2>Standard Commission Info</h2>
+
+            <p style="font-size: large;">The prices listed within the tables are the base price for all commissions and all prices are subject to a potential increase for detailed characters, prompts, or props.<br>
+                Commissions featuring additional characters start at +50% of the base price listed in the tables. Alternate versions of the same commission (eg: one with and w/o clothes) start at an extra 25% of the base price -- always ask the artist for a quote!</p>
+
+            <p style="font-size: large;">Please ensure you have read over, understand, and agree to <a href="commissions.html##terms-service">my T.O.S!</a> Feel free to reach out to the artist if anything on this page is unclear, or there are commission ideas that do not fit these standard table molds.</p>
+
+            <p style="font-size: large;">Examples of rendering styles can be found <a href="../enter.html">here.</a></p>
+
+            <p style="font-size: 13px; text-align: center;">Latest TOS update: 3/15/25</p>
+
+            <hr class="break">
+
+            <center>
                 <h2>FERALS</h2>
                 <div class="comm-box">
                     <table>
@@ -281,8 +246,9 @@
                         </tr>
                     </table>
                 </div>
-                <br>
-                <p><img src="images/style/stardivider.png" width="400px" height="40px"></p>
+
+                <p><img src="images/style/stardivider.png" class="responsive-img"></p>
+
                 <h2>ANTHROS + HUMAN(OID)S</h2>
                 <div class="comm-box">
                     <table>
@@ -316,8 +282,9 @@
                         </tr>
                     </table>
                 </div>
-                <br>
-                <p><img src="images/style/stardivider.png" width="400px" height="40px"></p>
+
+                <p><img src="images/style/stardivider.png" class="responsive-img"></p>
+
                 <h2>ADD-ONS AND EXTRAS</h2>
                 <p>*applicable to all commissions*</p>
                 <div class="comm-box">
@@ -339,66 +306,32 @@
                         </tr>
                     </table>
                 </div>
-                <br>
-                <p><img src="images/style/stardivider.png" width="400px" height="40px"></p>
+
+                <p><img src="images/style/stardivider.png" class="responsive-img"></p>
+
                 <h2 id="#terms-service">TERMS OF SERVICE</h2>
             </center>
+
             <div class="comm-list">
                 <ul>
-                    <li>
-                        <p><strong>All commissions will ONLY be accepted through either Paypal or Ko-fi <u>and in
-                                    USD.</u></strong></p>
-                    </li>
-                    <li>
-                        <p>I have the right to decline a commission for any reason.</p>
-                    </li>
-                    <li>
-                        <p>At least 50% of the full payment must be received before I begin working on the commission.
-                            Until the full payment is received, any progress photos will be delivered to the
-                            commissioner
-                            with a watermark.</p>
-                    </li>
-                    <li>
-                        <p><strong>References are <i>REQUIRED</i></strong> -- visual references are preferred and
-                            clearer,
-                            but in-depth text can work as well.</p>
-                    </li>
-                    <li>
-                        <p>Commissions for commercial purposes are x2 the regular price! <i>Must be discussed prior to
-                                payment.</i></p>
-                    </li>
-                    <li>
-                        <p>Chances are, I will publicly share the commission work I do. Please specify prior to payment
-                            if
-                            you'd like to opt out and keep it as a private commission.</p>
-                    </li>
-                    <li>
-                        <p>Understand that I have both academic and profession-related obligations that may effect the
-                            rate
-                            at which I draw and can correspond.</p>
-                    </li>
-                    <li>
-                        <p>Understand that due to specific communication needs, <strong>I require clear and concise
-                                communication and instruction.</p></strong>
-                    </li>
-                    <!-- <li>If something listed on this sheet is unclear, feel free to ask for clarification!</li> -->
-                    <li>
-                        <p>If I am unable to complete the commission, the commissioner is entitled to either:</p>
-                    </li>
+                    <li><p><strong>All commissions will ONLY be accepted through either Paypal or Ko-fi <u>and in USD.</u></strong></p></li>
+                    <li><p>I have the right to decline a commission for any reason.</p></li>
+                    <li><p>At least 50% of the full payment must be received before I begin working on the commission. Until the full payment is received, any progress photos will be delivered to the commissioner with a watermark.</p></li>
+                    <li><p><strong>References are <i>REQUIRED</i></strong> — visual references are preferred and clearer, but in-depth text can work as well.</p></li>
+                    <li><p>Commissions for commercial purposes are x2 the regular price! <i>Must be discussed prior to payment.</i></p></li>
+                    <li><p>I may publicly share the commission work I do. Please specify prior to payment if you'd like to keep it private.</p></li>
+                    <li><p>I have academic/professional obligations that may affect drawing/response speed.</p></li>
+                    <li><p><strong>I require clear and concise communication and instruction.</strong></p></li>
+                    <li><p>If I’m unable to complete the commission, you are entitled to:</p></li>
                 </ul>
                 <ul class="nested-list">
-                    <li>
-                        <p>A) a <i>partial</i> refund -- provided that the artist has made progress on the order, or;
-                        </p>
-                    </li>
-                </ul>
-                <ul class="nested-list">
-                    <li>
-                        <p>B) a <i>full</i> refund -- if the artist has not made any/very minimal progress.</p>
-                    </li>
+                    <li><p>A) a <i>partial</i> refund — if I’ve made progress</p></li>
+                    <li><p>B) a <i>full</i> refund — if I haven’t started</p></li>
                 </ul>
             </div>
+
             <br><br>
+
             <center>
                 <div class="comm-box">
                     <table>
@@ -416,26 +349,21 @@
                         </tr>
                         <tr>
                             <td>Couples art and ships</td>
-                            <td>*Anything extremely technical (ie. complex/detailed robotics/vehicles, etc.) <p
-                                    style="font-size: 10px;">
-                                    <i>*possible, but subject to high price increases</i>
-                                </p>
-                            </td>
+                            <td>Extremely technical content*</td>
                         </tr>
                         <tr>
                             <td>Blood/gore</td>
-                            <td>Not a lot, tbh... but once again, reach out to the artist!</td>
+                            <td>Ask if unsure!</td>
                         </tr>
                         <tr>
                             <td>NSFW</td>
                             <td></td>
                         </tr>
                     </table>
+                    <p style="font-size: 10px;"><i>*possible, but subject to high price increases</i></p>
                 </div>
             </center>
         </div>
     </div>
-    </div>
 </body>
-
 </html>
