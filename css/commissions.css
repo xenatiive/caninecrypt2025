@@ -1,0 +1,195 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ===== GLOBAL STYLES ===== */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #ce6b6b, #693636);
+  font-family: "Yatra One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline wavy #000;
+  text-shadow: 1px 0 10px #000;
+}
+
+p {
+  margin: 15px;
+  font-size: medium;
+}
+
+h2, h3 {
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
+  margin: 15px;
+}
+
+hr.break {
+  border: 1px dashed #000;
+}
+
+/* ===== LAYOUT ===== */
+.content {
+  display: grid;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 90vw;
+  max-width: 900px;
+}
+
+.box {
+  padding: 20px;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #ce6b6b;
+  padding: 6px 0 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.center-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== COMMISSION BOXES ===== */
+.comm-box, .comm-list {
+  background-color: #fff;
+  border: 1px solid #000;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.comm-list {
+  font-size: 18px;
+}
+
+/* ===== TABLES ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+th, td {
+  text-align: center;
+  padding: 6px;
+  border: 1px dashed #000;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+th {
+  font-size: 14px;
+  background-color: #f8f8f8;
+}
+
+/* ===== LISTS ===== */
+ul {
+  list-style-position: outside;
+  text-align: left;
+  margin-right: 12px;
+  list-style-image: url("https://64.media.tumblr.com/8719e3415315fd9aa2353aef890ffb77/52bc904368f8588c-51/s75x75_c1/cd63b1578ff8d2bf513259466e750f4bdc1c9eab.gifv");
+}
+
+.nested-list {
+  padding-left: 80px;
+  list-style-image: url("https://64.media.tumblr.com/ab09dd05fc26176eaf38ebbbe14bccd4/955a942df62a8781-58/s75x75_c1/66450cbe1fa8063391caa3c4075c6c4671151019.gifv");
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { box-shadow: inset 0 0 5px grey; }
+::-webkit-scrollbar-thumb { background: #000; }
+::-webkit-scrollbar-thumb:hover { background: #2e2e2e; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .content {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 5px;
+  }
+
+  .content, .comm-box, .comm-list, .box {
+    width: 100%;
+    max-width: none;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 4px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ul, .nested-list {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    padding: 0 5px;
+  }
+
+  .box, .content, .comm-box, .comm-list {
+    width: 100%;
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    font-size: 11px;
+    padding: 3px;
+  }
+
+  p {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+  ul, .nested-list {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 350px) {
+  th, td { font-size: 12px; }
+  p { font-size: 14px; }
+}
