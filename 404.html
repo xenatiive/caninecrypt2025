@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>NOTHING HERE...</title>
     <link rel="icon" href="images/style/skullfavicon.png" type="image/gif">
@@ -10,36 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #000000;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            margin: auto;
-            font-family: "Yatra One", system-ui;
-            font-weight: 400;
-            font-style: normal;
-            padding: 20px;
-            overflow: hidden;
-            padding-top: 320px;
-        }
+    html, body {
+        height: 100%; /* Make body take full viewport height */
+        margin: 0;
+        padding: 0;
+    }
 
-        a {
-            color: rgb(206, 107, 107);
-            font-weight: bold;
-            text-decoration-color: rgb(0, 0, 0);
-        }
+    body {
+        display: flex;
+        justify-content: center; /* horizontal center */
+        align-items: center;     /* vertical center */
+        flex-direction: column;  /* stack content vertically */
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        font-family: "Yatra One", system-ui;
+        text-align: center;
+        overflow: hidden;
+    }
 
-        a:hover {
-            color: rgb(255, 0, 0);
-            font-weight: bold;
-            text-shadow: #ffb8b8 1px 0 10px;
-            text-decoration: none;
-        }
-    </style>
+    a {
+        color: rgb(206, 107, 107);
+        font-weight: bold;
+        text-decoration-color: rgb(0, 0, 0);
+    }
+
+    a:hover {
+        color: rgb(255, 0, 0);
+        font-weight: bold;
+        text-shadow: #ffb8b8 1px 0 10px;
+        text-decoration: none;
+    }
+</style>
 </head>
-
 <body>
-
     <h1 style="color: red">You took a wrong turn.</h1>
     <p>The webmaster has not finished this section... what are you, a little snooper...? Trying to sneak around on my
         site? Huh?</p>
@@ -47,7 +49,5 @@
     <!-- there's no secret links in here either, u freak!!! -->
 
     <p><a href="index.html">&#x2190; go back home</a></p>
-
 </body>
-
 </html>
