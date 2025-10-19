@@ -59,7 +59,6 @@ hr.break {
 
 /* ===== HEADER ===== */
 header {
-  background-color: #ce6b6b;
   padding: 6px 0 10px;
   width: 100%;
   text-align: center;
@@ -194,4 +193,5 @@ ul {
   p { font-size: 14px; }
 
 }
+
 
