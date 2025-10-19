@@ -34,7 +34,7 @@ p {
 
 h2, h3 {
   text-align: center;
-  text-shadow: 2px 2px 4px #4b3a3a;
+  /* text-shadow: 2px 2px 4px #4b3a3a; */
   margin: 15px;
 }
 
@@ -194,3 +194,4 @@ ul {
   p { font-size: 14px; }
 
 }
+
