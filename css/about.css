@@ -1,0 +1,131 @@
+/* --- Base Styles --- */
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("https://64.media.tumblr.com/b545dea33c0fbfb8b42b12676036b214/e2eb7c92a871e649-18/s100x200/1f91ec2fa1e2ba5ccb952502948b68b8569af54e.pnj");
+            font-family: "Yatra One", system-ui;
+            font-weight: 400;
+            color: #000;
+        }
+
+        h2,
+        h3,
+        p {
+            margin: 15px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
+        h3 {
+            font-size: 19px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        a {
+            color: rgb(230, 130, 130);
+            font-weight: bold;
+            text-decoration: underline wavy rgb(0, 0, 0);
+            text-shadow: 1px 0 10px #000;
+        }
+
+        /* --- Layout --- */
+        .content {
+            display: grid;
+            position: relative;
+            margin: auto;
+        }
+
+        .box {
+            background: linear-gradient(to bottom, #ce6b6b, #693636);
+            padding: 20px;
+            text-align: center;
+            border-radius: 50px;
+            margin: auto;
+            max-width: 1000px;
+        }
+
+        .imgL {
+            float: left;
+        }
+
+        .imgR {
+            float: right;
+        }
+
+        .center-image {
+            height: auto;
+            left: 50%;
+            text-align: center;
+        }
+
+        .resize {
+            height: auto;
+        }
+
+        /* --- Lists --- */
+        ul {
+            list-style-image: url("https://64.media.tumblr.com/8719e3415315fd9aa2353aef890ffb77/52bc904368f8588c-51/s75x75_c1/cd63b1578ff8d2bf513259466e750f4bdc1c9eab.gifv");
+            list-style-position: outside;
+            text-align: left;
+            margin-right: 12px;
+        }
+
+        li {
+            font-size: 19px;
+        }
+
+        .nested-list {
+            padding-left: 80px;
+            list-style-image: url("https://64.media.tumblr.com/ab09dd05fc26176eaf38ebbbe14bccd4/955a942df62a8781-58/s75x75_c1/66450cbe1fa8063391caa3c4075c6c4671151019.gifv");
+            font-size: 10px;
+        }
+
+        /* --- Flex Layout --- */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            border-radius: 50px;
+            margin: auto;
+            max-width: 1000px;
+            gap: 10px;
+        }
+
+        .flex-item {
+            flex: 1 1 50%;
+            background: linear-gradient(to bottom, #ce6b6b, #693636);
+            padding: 20px;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        .flex-item.right {
+            background: linear-gradient(to bottom, #a06363, #5a3b3b);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Responsive scaling for smaller screens */
+        @media (max-width: 480px) {
+            .center-image img.resize {
+                max-width: 95vw;
+                /* scales down smoothly */
+            }
+
+            .resize {
+                width: 95vw;
+            }
+        }
