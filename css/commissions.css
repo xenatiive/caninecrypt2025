@@ -195,30 +195,35 @@ ul {
 
 /* xxxxx ADD-ONS FOR FLAT COLOR + FULL RENDER COMM IMAGE EXAMPLE YAY xxxxx */
 
-/* Flexible container holding the images */
+/* Flexible container holding the link wrappers */
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* Space between images */
+  gap: 15px; 
   width: 100%;
   margin: 15px auto;
 }
 
-/* Control image size on desktop/larger screens */
-.container img {
-  /* Prevent images from exceeding 420px each */
-  max-width: 420px; 
-  /* Takes 45% of width max to force 2 items per row */
+/* Target the anchor (<a>) tags as flex items */
+.container a {
+  /* Set a reasonable maximum pixel size for desktop */
+  max-width: 450px; 
+  /* Takes up slightly less than half the row on desktop */
   width: 45%; 
+  display: block;
+}
+
+.container a img {
+  width: 100%;
   height: auto;
+  display: block;
   object-fit: contain;
 }
 
-/* Stacking on mobile screens */
 @media (max-width: 600px) {
-  .container img {
+  .container a {
     max-width: 100%;
     width: 100%; /* Stacks vertically on smaller screens */
   }
