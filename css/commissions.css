@@ -191,7 +191,35 @@ ul {
 @media (max-width: 350px) {
   th, td { font-size: 12px; }
   p { font-size: 14px; }
-
 }
 
+/* xxxxx ADD-ONS FOR FLAT COLOR + FULL RENDER COMM IMAGE EXAMPLE YAY xxxxx */
 
+/* Flexible container holding the images */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between images */
+  width: 100%;
+  margin: 15px auto;
+}
+
+/* Control image size on desktop/larger screens */
+.container img {
+  /* Prevent images from exceeding 420px each */
+  max-width: 420px; 
+  /* Takes 45% of width max to force 2 items per row */
+  width: 45%; 
+  height: auto;
+  object-fit: contain;
+}
+
+/* Stacking on mobile screens */
+@media (max-width: 600px) {
+  .container img {
+    max-width: 100%;
+    width: 100%; /* Stacks vertically on smaller screens */
+  }
+}
